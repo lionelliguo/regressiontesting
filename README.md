@@ -7,8 +7,7 @@
 ---
 
 ## 🧩 Overview
-`RegressionTesting` is a Python package for Automated Regression Testing with Google Sheets.  
-This package allows you to:
+`RegressionTesting` is a Python package for Automated Regression Testing with Google Sheets. This package allows you to:
 
 - Fetch and compare HTTP Status Line and Header Fields using `curl` commands stored in Google Sheets.  
 - Process these commands and store results (PASS/FAIL) back to Google Sheets.  
