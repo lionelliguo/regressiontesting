@@ -1,0 +1,8 @@
+{
+  "SPREADSHEET_URL": "https://docs.google.com/spreadsheets/d/1SFENuDWai_mZlKA74h7kkGE4hsU9KKtuigpx0-w3vbI/",
+  "SERVICE_ACCOUNT_FILE": "regressiontesting-474404-00f8972a63a8.json",
+  "SLEEP_SECONDS": 1.0,
+  "IGNORE_CASE": true,
+  "COPY_BATCH_SIZE": 1,
+  "OUTPUT_BATCH_SIZE": 1
+}

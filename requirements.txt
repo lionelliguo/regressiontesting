@@ -1,0 +1,10 @@
+# RegressionTesting
+# Copyright (c) 2025 Lionel Guo
+# Author: Lionel Guo
+# Email: lionelliguo@gmail.com
+# GitHub: https://github.com/lionelliguo/regressiontesting
+
+gspread==6.2.1
+google-auth==2.40.3
+google-auth-oauthlib==1.2.2
+regressiontesting==1.2.0
