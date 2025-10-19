@@ -31,9 +31,11 @@ if __name__ == "__main__":
     
     selection_rule_1, selection_rule_2, comparison_rule = regression_test.load_config_rules()
 
+    # Create a new sheet with current date and time
     new_sheet = regression_test.create_new_sheet_with_current_datetime()
     
     if new_sheet is not None:
+        # Process the new sheet    
         regression_test.process_sheet(new_sheet, selection_rule_1, selection_rule_2, comparison_rule)
         print("All rows processed.")
     else:

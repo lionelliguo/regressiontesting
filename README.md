@@ -98,8 +98,8 @@ Example configuration file:
   "SERVICE_ACCOUNT_FILE": "Your Google Service Account Key.json",
   "SLEEP_SECONDS": 1.0,
   "IGNORE_CASE": true,
-  "COPY_BATCH_SIZE": 1,
-  "OUTPUT_BATCH_SIZE": 1
+  "COPY_BATCH_SIZE": 0,
+  "OUTPUT_BATCH_SIZE": 0
 }
 ```
 
