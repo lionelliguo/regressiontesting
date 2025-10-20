@@ -144,6 +144,7 @@ You can also view the regression testing results directly at:
 👉 [Google Sheet Link](https://docs.google.com/spreadsheets/d/1SFENuDWai_mZlKA74h7kkGE4hsU9KKtuigpx0-w3vbI/)
 
 ---
+
 ## 📸 Snapshots
 
 ### 🧪 TEST CASE
