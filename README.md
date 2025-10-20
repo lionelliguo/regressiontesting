@@ -124,7 +124,7 @@ Example configuration file:
    - In **Keys → Add key** , create a new JSON key and download the JSON key file to the current directory.
 
 ### 4. **Share Google Sheet with Google Service Account**
-   - Open your Google Sheet → **Share** → add the service account email as "Editor".
+   - Open your Google Sheet → **Share** → add the service account email as Editor.
 
 ---
 
