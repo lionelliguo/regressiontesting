@@ -94,8 +94,8 @@ Example configuration file:
 
 ```json
 {
-  "SPREADSHEET_URL": "Your Google Spreadsheets URL",
-  "SERVICE_ACCOUNT_FILE": "Your Google Service Account Key.json",
+  "SPREADSHEET_URL": "Your_Google_Spreadsheets_URL",
+  "SERVICE_ACCOUNT_FILE": "Your_Google_Service_Account Key.json",
   "SLEEP_SECONDS": 1.0,
   "IGNORE_CASE": true,
   "COPY_BATCH_SIZE": 0,
