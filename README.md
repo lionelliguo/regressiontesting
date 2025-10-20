@@ -70,7 +70,7 @@ The new sheet includes the following structure:
   pip3 install gspread google-auth google-auth-oauthlib regressiontesting
   ```
 - `curl` command-line tool  
-- A valid Google Service Account JSON key
+- A valid Google service account JSON key file
 
 ---
 
