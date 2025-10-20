@@ -108,22 +108,22 @@ Example configuration file:
 
 ---
 
-## 🌐 Google Sheets and Service Account Setup
+## 🌐 Google Sheets and Google Service Account Setup
 
 ### 1. **Create a Google Sheet**
    - Go to [Google Sheets](https://sheets.google.com).
    - Create a blank spreadsheet (e.g., `regressiontesting`).
 
-### 2. **Enable APIs**
+### 2. **Enable Google APIs**
    - Go to [Google Cloud Console](https://console.cloud.google.com/).
    - Create a new **Project**.
    - Enable **Google Sheets API** and **Google Drive API**.
 
-### 3. **Create a Service Account**
+### 3. **Create a Google Service Account**
    - In **IAM & Admin → Service Accounts**, create a new service account and get the service account email.
    - In **Keys → Add key** , create a new JSON key and download the JSON key file to the current directory.
 
-### 4. **Share Sheet with Service Account**
+### 4. **Share Google Sheet with Google Service Account**
    - Open your Google Sheet → **Share** → add the service account email as "Editor".
 
 ---
