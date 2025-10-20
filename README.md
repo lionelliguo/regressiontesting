@@ -32,40 +32,31 @@ Example:
 | `curl https://example1.com` |          | `curl https://example2.com` |          |        |
 | `curl https://example3.com` |          | `curl https://example4.com` |          |        |
 
-Each row represents one test case. You can add as many rows as needed for more test cases.
-
 #### 2. **Config Sheet (`CONFIG`)**
 
 The **CONFIG** sheet defines selection and comparison rules for the HTTP Status Line and Header Fields. It contains the following columns:
 
-- **SELECTION_RULE_1**: Stores the HTTP Status Line and Header Fields that should be ignored during the first curl script execution. The HTTP Status Line and Header Fields will not appear in `RESULT_1`.
-- **SELECTION_RULE_2**: Stores the HTTP Status Line and Header Fields that should be ignored during the second curl script execution. The HTTP Status Line and Header Fields will not appear in `RESULT_2`.
-- **COMPARISON_RULE**: Stores the HTTP Status Line and Header Fields that should be ignored during the comparison between `RESULT_1` and `RESULT_2`. The HTTP Status Line and Header Fields will be excluded when checking if the results match.
+- **SELECTION_RULE_1**: Fields to ignore for the first curl result.
+- **SELECTION_RULE_2**: Fields to ignore for the second curl result.
+- **COMPARISON_RULE**: Fields ignored during comparison.
 
 Example:
 
-| SELECTION_RULE_1      | SELECTION_RULE_2      | COMPARISON_RULE       |
-|-----------------------|-----------------------|-----------------------|
-| `Content-Length`      | `Content-Length`      | `Date`                |
-| `Content-Type`        | `Content-Type`        | `Server`              |
+| SELECTION_RULE_1 | SELECTION_RULE_2 | COMPARISON_RULE |
+|------------------|------------------|-----------------|
+| Content-Length   | Content-Length   | Date            |
+| Content-Type     | Content-Type     | Server          |
 
-You can add as many rows as needed for additional rules.
+#### 3. **Automatic Creation of a New Sheet**
 
----
-
-### 3. **Automatic Creation of a New Sheet**
-
-Each time regression testing is executed, a new sheet is automatically created with the current date and time. The **`curl`** scripts from the **TEST CASE** sheet are copied into the new sheet.
-
-The new sheet includes the following structure:
-- **CURL_1** and **CURL_2** from the original **TEST CASE** sheet.
-- New regression testing results are recorded for documentation and future reference.
+Each regression run creates a new sheet (timestamped).  
+This sheet contains the same test structure and logs all outputs for documentation.
 
 ---
 
 ## ⚙️ Requirements
 - Python 3.x  
-- Required Python packages:
+- Required packages:
   ```bash
   pip3 install gspread google-auth google-auth-oauthlib regressiontesting
   ```
@@ -75,23 +66,15 @@ The new sheet includes the following structure:
 ---
 
 ## 🚀 Setup
-
-### 1. Clone repository
 ```bash
 git clone https://github.com/lionelliguo/regressiontesting.git
 cd regressiontesting
-```
-
-### 2. Install dependencies
-```bash
 pip3 install -r requirements.txt
 ```
 
 ---
 
 ## 🛠️ Configuration (`settings.json`)
-Example configuration file:
-
 ```json
 {
   "SPREADSHEET_URL": "Your Google Spreadsheets URL",
@@ -102,35 +85,11 @@ Example configuration file:
   "OUTPUT_BATCH_SIZE": 0
 }
 ```
-
-> **Note:**  
-> `0` means all in one batch — no batching process.
-
----
-
-## 🌐 Google Sheets and Service Account Setup
-
-### 1. **Create a Google Sheet**
-   - Go to [Google Sheets](https://sheets.google.com).
-   - Create a blank spreadsheet (e.g., `regressiontesting`).
-   - Share the sheet with your Service Account email.
-
-### 2. **Enable APIs**
-   - Go to [Google Cloud Console](https://console.cloud.google.com/).
-   - Enable **Google Sheets API** and **Google Drive API**.
-
-### 3. **Create a Service Account**
-   - In **IAM & Admin → Service Accounts**, create a new account and download the JSON key file.
-
-### 4. **Share Sheet with Service Account**
-   - Open your Google Sheet → **Share** → add Service Account email.
+> `0` means “all in one batch”.
 
 ---
 
 ## ▶️ Example Usage
-
-After configuring `settings.json`, run the regression test and check the results in the Google Sheet.
-
 ```bash
 python3 main.py
 ```
@@ -138,23 +97,31 @@ python3 main.py
 ---
 
 ## ⚡ Quick Start
+Use `settings-sample.json` for instant testing.  
+Result Sheet: [Google Sheet Link](https://docs.google.com/spreadsheets/d/1SFENuDWai_mZIKA7h7kkGE4hsU9KKtuigpx0-w3vbI/)
 
-For a quick start, you can use the provided `settings-sample.json` instead of `settings.json` to quickly run the program.  
-You can also view the regression testing results directly at:  
-👉 [Google Sheet Link](https://docs.google.com/spreadsheets/d/1SFENuDWai_mZlKA74h7kkGE4hsU9KKtuigpx0-w3vbI/)
+---
+
+## 📸 Snapshots
+
+### 🧪 TEST CASE
+Example test cases setup in Google Sheets:  
+![TEST CASE](./TEST%20CASE.png)
+
+---
+
+### ⚙️ CONFIG
+Configuration rules for header selection and comparison:  
+![CONFIG](./CONFIG.png)
+
+---
+
+### 📊 RESULT
+Regression test results with color-coded PASS/FAIL visualization:  
+![RESULT](./RESULT.png)
 
 ---
 
 ## 📄 License
-
-Licensed under the **Apache License, Version 2.0** (the "License");  
-you may not use this file except in compliance with the License.  
-You may obtain a copy of the License at:
-
-> https://www.apache.org/licenses/LICENSE-2.0
-
-Unless required by applicable law or agreed to in writing, software  
-distributed under the License is distributed on an "AS IS" BASIS,  
-WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.  
-See the License for the specific language governing permissions and  
-limitations under the License.
+Licensed under the **Apache License, Version 2.0**.  
+See [LICENSE](https://www.apache.org/licenses/LICENSE-2.0) for details.
