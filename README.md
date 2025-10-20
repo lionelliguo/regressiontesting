@@ -120,11 +120,11 @@ Example configuration file:
    - Enable **Google Sheets API** and **Google Drive API**.
 
 ### 3. **Create a Service Account**
-   - In **IAM & Admin → Service Accounts**, create a new service account, get the service account email.
-   - **Add key**, create a new JSON key and download the JSON key file.
+   - In **IAM & Admin → Service Accounts**, create a new service account and get the service account email.
+   - In **Keys → Add key** , create a new JSON key and download the JSON key file to the current directory.
 
 ### 4. **Share Sheet with Service Account**
-   - Open your Google Sheet → **Share** → add the service account email.
+   - Open your Google Sheet → **Share** → add the service account email as "Editor".
 
 ---
 
