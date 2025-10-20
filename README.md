@@ -116,13 +116,15 @@ Example configuration file:
 
 ### 2. **Enable APIs**
    - Go to [Google Cloud Console](https://console.cloud.google.com/).
+   - Create a new **Project**.
    - Enable **Google Sheets API** and **Google Drive API**.
 
 ### 3. **Create a Service Account**
-   - In **IAM & Admin → Service Accounts**, create a new account and download the JSON key file.
+   - In **IAM & Admin → Service Accounts**, create a new service account, get the service account email.
+   - **Add key**, create a new JSON key and download the JSON key file.
 
 ### 4. **Share Sheet with Service Account**
-   - Open your Google Sheet → **Share** → add Service Account email.
+   - Open your Google Sheet → **Share** → add the service account email.
 
 ---
 
