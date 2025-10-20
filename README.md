@@ -67,7 +67,7 @@ The new sheet includes the following structure:
 - Python 3.x  
 - Required Python packages:
   ```bash
-  pip3 install gspread google-auth google-auth-oauthlib regressiontesting
+  pip3 install gspread google-auth google-auth-oauthlib gspread-formatting regressiontesting
   ```
 - `curl` command-line tool  
 - A valid Google service account JSON key file
