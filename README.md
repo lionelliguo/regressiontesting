@@ -113,7 +113,6 @@ Example configuration file:
 ### 1. **Create a Google Sheet**
    - Go to [Google Sheets](https://sheets.google.com).
    - Create a blank spreadsheet (e.g., `regressiontesting`).
-   - Share the sheet with your Service Account email.
 
 ### 2. **Enable APIs**
    - Go to [Google Cloud Console](https://console.cloud.google.com/).
