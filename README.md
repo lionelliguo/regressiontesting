@@ -98,7 +98,7 @@ python3 main.py
 
 ## ⚡ Quick Start
 Use `settings-sample.json` for instant testing.  
-Result Sheet: [Google Sheet Link](https://docs.google.com/spreadsheets/d/1SFENuDWai_mZIKA7h7kkGE4hsU9KKtuigpx0-w3vbI/)
+Result Sheet: [Google Sheet Link](https://docs.google.com/spreadsheets/d/1SFENuDWai_mZlKA74h7kkGE4hsU9KKtuigpx0-w3vbI/)
 
 ---
 
